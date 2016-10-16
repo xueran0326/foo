@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+        function ifclose(){
+ 	    document.write("窗口关闭");  
+     	
+     }
+     function ifnotclose(){
+ 	  
+     	document.write("窗口没有关闭");
+     }
+        
+       function checkwin(){
+       	if(mywindow.closed)
+       		ifclose()
+       	else
+       		ifnotclose()
+
+
+
+       }
+
+        </script>
+       
+    </head>
+    <body >
+   
+   <input type="button" value="检验窗口" onclick="checkwin()">
+    </body>
+     <script type="text/javascript">
+     mywindow=window.open('','','width=200,height=100');
+     mywindow.document.write("这是一个窗口");
+   
+     </script>
+</html>
